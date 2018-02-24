@@ -1,35 +1,66 @@
 {
-  "globals": {
-    "rawData": true,
-    "app": true,
-    "Handlebars": true,
-    "page": true,
-    "$": true,
-    "marked": true,
-    "hljs": true
-  },
+"globals": {
+  "rawData": true,
+  "app": true,
+  "Handlebars": true,
+  "page": true,
+  "$": true,
+  "marked": true,
+  "hljs": true
+},
   "extends": "eslint:recommended",
   "parserOptions": {
     "ecmaVersion": 6,
-    "ecmaFeatures": {"impliedStrict": true}
+    "ecmaFeatures": {
+      "impliedStrict": true
+    }
   },
   "env": {
     "browser": true,
+    "es6": true,
     "jquery": true,
-    "node": true,
-    "es6": true
+    "node": true
   },
   "rules": {
+    "eqeqeq": [
+      "error",
+      "always"
+    ],
     "no-console": "off",
     "no-undefined": "off",
-    "new-cap": "warn",
+    "indent": [
+      "error",
+      2
+    ],
+    "quotes": [
+      "warn",
+      "single"
+    ],
+    "space-infix-ops": [
+      "error",
+      {
+        "int32Hint": false
+      }
+    ],
+    "no-multi-spaces": [
+      "warn",
+      {
+        "exceptions": {
+          "VariableDeclarator": true
+        }
+      }
+    ],
     "no-trailing-spaces": "warn",
-    "quotes": ["warn", "single", {"allowTemplateLiterals": true}],
-    "no-multi-spaces": ["warn", {"exceptions": {"VariableDeclarator": true}}],
-    "no-template-curly-in-string": "error",
-    "eqeqeq": ["error", "always"],
-    "semi": ["error", "always"],
-    "indent": ["error", 2],
-    "no-redeclare": ["error", {"builtinGlobals": true}]
+    "new-cap": "warn",
+    "no-redeclare": [
+      "error",
+      {
+        "builtinGlobals": true
+      }
+    ],
+    "semi": [
+      2,
+      "always"
+    ]
   }
 }
