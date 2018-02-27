@@ -11,9 +11,13 @@ function main() {
     } else if('select-color magenta not-selected') {
       colorClass = 'magenta';
     }
+    $(this).removeClass('not-selected');
+    $(this).siblings().addClass('not-selected');
   }
 )
-
-};
+  $('.box').on('click', function(){
+    $(this).toggleClass(colorClass);
+    })
+  };
 
 $(document).ready(main);
