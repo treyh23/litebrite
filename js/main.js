@@ -1,14 +1,19 @@
 'use strict';
+let colorClass = '';
 
 function main() {
   $('.select-color').on('click',() => {
+    let selectedColor = $(this).attr('class')
     if(selectedColor === 'select-color cyan not-selected') {
-      return 
-    }  else if(selectedColor === '') {
-      
+      colorClass = 'cyan';
+    } else if(selectedColor === 'select-color yellow not-selected') {
+      colorClass = 'yellow';
+    } else if('select-color magenta not-selected') {
+      colorClass = 'magenta';
     }
   }
 )
+
 };
 
 $(document).ready(main);
