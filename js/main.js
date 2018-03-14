@@ -1,8 +1,9 @@
 'use strict';
+
 let colorClass = '';
 
 function main() {
-  $('.select-color').on('click',() => {
+  $('.select-color').on('click',function() {
     
     let selectedColor = $(this).attr('class')
       
@@ -32,3 +33,5 @@ function main() {
   })
 
 $(document).ready(main);
+
+// If you change it from $('.select-color').on('click',() => { to $('.select-color').on('click',function(){ it should work
