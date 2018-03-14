@@ -22,4 +22,13 @@ function main() {
     })
   };
 
+  $('.toggle-blink').on('click', function(){
+    if(colorClass){
+      $('.toggle-blink').toggleClass('opacity');
+    }
+    setInterval(function(){
+      $('.box.cyan, .box.yellow, .box.magenta')
+    }, 300)
+  })
+
 $(document).ready(main);
